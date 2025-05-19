@@ -21,7 +21,7 @@ const db = new sqlite3.Database(path.join(__dirname, "imdb.db"), (err) => {
 app.get("/api/movies", (req, res) => {
   const title = req.query.title;
   db.all(
-    `SELECT id, title, year FROM Movie WHERE title LIKE ? LIMIT 10`,
+    `SELECT MovieID AS id, title, year FROM Movie WHERE title LIKE ? LIMIT 10`, //Correccion de base de datos
     [`%${title}%`],
     (err, rows) => {
       if (err) {
