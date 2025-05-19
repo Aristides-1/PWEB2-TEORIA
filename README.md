@@ -5,7 +5,7 @@ Utiliza Node.js + Express en el backend, HTML + JavaScript en el frontend, y AJA
 
 📁 Estructura del Proyecto
 
-imdb-app/
+PELICULAS TAQUILLERAS
 ├── backend/
 │ ├── server.js # Servidor con Express + conexión SQLite
 │ ├── imdb.db # Base de datos local con tablas Movie, Actor, Casting
