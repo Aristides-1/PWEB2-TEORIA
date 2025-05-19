@@ -16,3 +16,24 @@ const db = new sqlite3.Database(path.join(__dirname, "imdb.db"), (err) => {
     console.log("Conectado a la base de datos SQLite.");
   }
 });
+
+// Ruta de búsqueda de películas
+app.get("/api/movies", (req, res) => {
+  const title = req.query.title;
+  db.all(
+    `SELECT id, title, year FROM Movie WHERE title LIKE ? LIMIT 10`,
+    [`%${title}%`],
+    (err, rows) => {
+      if (err) {
+        console.error("Error en la consulta:", err.message);
+        res.status(500).json({ error: err.message });
+      } else {
+        res.json(rows);
+      }
+    }
+  );
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
