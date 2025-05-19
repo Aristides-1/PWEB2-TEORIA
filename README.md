@@ -6,16 +6,16 @@ Utiliza Node.js + Express en el backend, HTML + JavaScript en el frontend, y AJA
 📁 Estructura del Proyecto
 
 PELICULAS TAQUILLERAS
-├── backend/
-│ ├── server.js # Servidor con Express + conexión SQLite
-│ ├── imdb.db # Base de datos local con tablas Movie, Actor, Casting
-│ └── package.json # Dependencias y scripts de Node.js
-├── frontend/
-│ └── public/
-│ ├── index.html # Interfaz web
-│ ├── main.js # Lógica AJAX del cliente
-│ └── styles.css # Estilos CSS opcionales
-└── README.md # Documentación del proyecto
+-backend
+--- server.js # Servidor con Express + conexión SQLite
+--- imdb.db # Base de datos local con tablas Movie, Actor, Casting
+--- package.json # Dependencias y scripts de Node.js
+-frontend/
+--- public/
+----- index.html # Interfaz web
+----- main.js # Lógica AJAX del cliente
+----- styles.css # Estilos CSS opcionales
+- README.md # Documentación del proyecto
 
 ⚙️ Requisitos
 
