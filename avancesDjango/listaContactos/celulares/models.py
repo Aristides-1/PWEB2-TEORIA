@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+#Atributos de clase celulares
+class Celulares(models.Model):
+    telefono=models.CharField()
