@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+#Atributos de clase ciudades
+class Ciudades(models.Model):
+    ciudad=models.CharFiel()
