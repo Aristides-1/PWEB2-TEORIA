@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Template Base </title>
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        <h1>Este es un texto de Base</h1>
-        {% block content %}
-        Reemplazame
-        {% endblock %}
+{% block title %}Página de Inicio{% endblock %}
 
-    </body>
-</html>
+{% block header %}
+    <h2>Este es un texto de la página de inicio</h2>
+{% endblock %}
+
+{% block content %}
+    <p>Contenido principal: ¡Hola desde Home!</p>
+{% endblock %}
+
+{% block footer %}
+    <p>© 2025 Mi Sitio personalizado desde home.html</p>
+{% endblock %}
