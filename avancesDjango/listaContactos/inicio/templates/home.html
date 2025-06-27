@@ -9,6 +9,13 @@
         <h2>Con templates!!!</h2>
         {{ request.user }}
         <br>
-        {{ request.user.is_aunthenticated }}
+        {{ request.user.is_authenticated }}
+
+        
+        <p>¿Es staff? {{ request.user.is_staff }}
+        </p>
+
+        
+
     </body>
 </html>
