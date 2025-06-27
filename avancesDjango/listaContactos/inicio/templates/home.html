@@ -5,17 +5,10 @@
     </head>
 
     <body>
-        <h1>Hola mundoooo desde Django</h1>
-        <h2>Con templates!!!</h2>
-        {{ request.user }}
-        <br>
-        {{ request.user.is_authenticated }}
-
-        
-        <p>¿Es staff? {{ request.user.is_staff }}
-        </p>
-
-        
+        <h1>Este es un texto de Base</h1>
+        {% block content %}
+        Reemplazame
+        {% endblock %}
 
     </body>
 </html>
