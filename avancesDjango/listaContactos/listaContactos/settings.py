@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'personas',
     'celulares',
     'ciudades',
+    'inicio',
 
 ]
 
