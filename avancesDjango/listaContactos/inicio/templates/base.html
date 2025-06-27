@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi sitio{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>🐾 Bienvenido a Mi Sitio Django 🐾</h1>
+        {% block header %}{% endblock %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}© 2025 Mi Sitio{% endblock %}
+    </footer>
+</body>
+</html>
