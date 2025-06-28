@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Grabar</button>
+<form action="." method="get">
+    <input type="text" name="q" placeholder="buscar" />
+    <input type="submit" value="buscar"/>
 </form>
 {% endblock %}
