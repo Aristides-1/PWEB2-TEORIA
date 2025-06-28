@@ -26,7 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Nuevas rutas agregadas
-    path('home/', views.home, name='home'),
     path('primera/', views.primera, name='primera'),
     path('segunda/', views.segunda, name='segunda'),
     path('tercera/', views.tercera, name='tercera'),
