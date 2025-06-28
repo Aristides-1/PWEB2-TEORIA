@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Personas
 from .forms import PersonaForm
 
@@ -14,8 +14,7 @@ def personaCreateView(request):
     form = PersonaForm(request.POST or None)
     if form.is_valid():
         form.save()
-        form = PersonaForm()
-
+        return redirect('/admin/personas/personas/')  
     context = {
         'form': form
     }
