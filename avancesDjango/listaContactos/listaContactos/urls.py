@@ -25,7 +25,8 @@ urlpatterns = [
     path('', myHomeView, name='Página de inicio'),
     path('another/', anotherView, name='Página de inicio'),
     path('admin/', admin.site.urls),
-    path('personas/', personaTestView, name='otro'),
+    path('personas/', personaTestView, name='testViewPersona'),
+    path('agregar/', personaCreateView, name='createPersona'),
 
     # Nuevas rutas agregadas
     path('primera/', views.primera, name='primera'),
