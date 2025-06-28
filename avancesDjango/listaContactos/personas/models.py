@@ -6,6 +6,7 @@ class Personas(models.Model):
     apellidos=models.CharField(max_length=35)
     edad = models.PositiveSmallIntegerField()
     donador=models.BooleanField(default=False)
+    correo = models.EmailField()
 
     def __str__(self):
         return self.nombres
