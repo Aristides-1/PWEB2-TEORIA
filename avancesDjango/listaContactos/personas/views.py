@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Personas
+from .forms import PersonaForm
+
 
 def personaTestView(request):
     obj = Personas.objects.get(id = 1)
