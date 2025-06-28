@@ -10,8 +10,14 @@
     <h2>Hola munnndo desde Django</h2>
     <h3>Con templates</h3>
     <p>
-        {{myText}}
-        {{myNumber}}
+            Texto original: {{ myText }}<br>
+            MAYÚSCULAS: {{ myText|upper }}<br>
+            Minúsculas: {{ myText|lower }}<br>
+            Título: {{ myText|title }}<br>
+            Longitud del texto: {{ myText|length }}<br>
+            Nro + 10 = {{ myNumber|add:"10" }}<br>
+            Lista como string: {{ myList|join:" - " }}<br>
+            Primeros 2: {{ myList|slice:":2"|join:", " }}<br>
     </p>
     <ul>
     {% for myItem in myList %}
