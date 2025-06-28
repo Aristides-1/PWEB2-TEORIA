@@ -20,7 +20,7 @@ from inicio.views import myHomeView
 from inicio.views import anotherView
 from inicio import views
 from personas.views import personaTestView
-from personas.views import personaTestView, personaCreateView
+from personas.views import personaTestView, personaCreateView, searchForHelp
 
 
 urlpatterns = [
@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('personas/', personaTestView, name='testViewPersona'),
     path('agregar/', personaCreateView, name='createPersona'),
+    path('search', searchForHelp, name='buscar'),
 
     # Nuevas rutas agregadas
     path('primera/', views.primera, name='primera'),
