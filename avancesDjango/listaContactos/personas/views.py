@@ -4,7 +4,6 @@ from .models import Personas
 def personaTestView(request):
     obj = Personas.objects.get(id = 1)
     context ={
-        'nombre':obj.nombres,
-        'edad':obj.edad,
-    }
-    return render(request, 'personas/test.html', context)
+        'objeto': obj,
+        }
+    return render(request, 'personas/descripcion.html', context)
