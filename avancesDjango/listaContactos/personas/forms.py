@@ -1,4 +1,5 @@
 from django import forms
+from .models import Persona
 
 class RawPersonaForm(forms.Form):
     nombres = forms.CharField()
