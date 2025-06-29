@@ -4,9 +4,9 @@ from django.db import models
 class Personas(models.Model):
     nombres=models.CharField(max_length=25, blank=False, null=False)
     apellidos=models.CharField(max_length=35)
-    edad = models.PositiveSmallIntegerField()
+    edad = models.IntegerField()
     donador=models.BooleanField(default=False)
-    correo = models.EmailField()
+    
 
     def __str__(self):
         return self.nombres
