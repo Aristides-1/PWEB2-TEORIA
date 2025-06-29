@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Personas
-from .forms import PersonaForm, RawPersonaForm
+from .models import Persona
+from .forms import RawPersonaForm
 
 
 def personaTestView(request):
