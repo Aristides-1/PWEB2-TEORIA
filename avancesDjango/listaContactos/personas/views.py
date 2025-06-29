@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Personas
-from .forms import PersonaForm
+from .forms import PersonaForm, RawPersonaForm
 
 
 def personaTestView(request):
@@ -20,3 +20,11 @@ def personaCreateView(request):
 
 def searchForHelp(request):
     return render(request, 'personas/search.html', {})
+
+def personasAnotherCreateView(request):
+    form = RawPersonaForm()
+    context = {
+        'form': form,
+        }
+    return render(request, 'personas/personasCreate.html', context)
+    
