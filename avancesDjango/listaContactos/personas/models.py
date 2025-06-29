@@ -1,7 +1,7 @@
 from django.db import models
 
 #Atributos de clase persona
-class Personas(models.Model):
+class Persona(models.Model):
     nombres=models.CharField(max_length=25, blank=False, null=False)
     apellidos=models.CharField(max_length=35)
     edad = models.IntegerField()
