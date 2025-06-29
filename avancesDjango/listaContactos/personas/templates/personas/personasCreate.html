@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-<form method="post"> {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Grabar"/>
-</form>
+  <form method="POST">
+    {% csrf_token %}
+
+    <label for="{{ form.nombre.id_for_label }}">Nombres:</label>
+    {{ form.nombre }}
+
+    <label for="{{ form.apellido.id_for_label }}">Apellidos:</label>
+    {{ form.apellido }}
+
+    <label for="{{ form.edad.id_for_label }}">Edad:</label>
+    {{ form.edad }}
+
+    <label for="{{ form.donador.id_for_label }}">Donador:</label>
+    {{ form.donador }}
+
+    <input type="submit" value="Grabar" />
+  </form>
 {% endblock %}
