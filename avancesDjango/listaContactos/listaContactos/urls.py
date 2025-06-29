@@ -19,17 +19,16 @@ from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
 from inicio import views
-from personas.views import personaTestView
-from personas.views import personasTestView, personaCreateView, personasAnotherCreateView
+from personas.views import personaTestView, personaCreateView, personasAnotherCreateView
 
 
 urlpatterns = [
     path('', myHomeView, name='Página de inicio'),
     path('another/', anotherView, name='otra'),
-    path('people', personasTestView, name = 'personas'),
+    path('people', personaTestView, name = 'personas'),
     path('add', personaCreateView, name='AgregarPersonas'),
     path('admin/', admin.site.urls),
-    path('anotherAdd', personasAnotherCreateView, name='OtroAgregarPersonas'),
+    path('anotherAdd/', personasAnotherCreateView, name='OtroAgregarPersonas'),
     path('agregar/', personaCreateView, name='createPersona'),
 
     # Nuevas rutas agregadas
