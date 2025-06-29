@@ -7,13 +7,13 @@
     {% csrf_token %}
 
     <label for="id_nombres">Nombres:</label>
-    <input type="text" name="nombres" id="id_nombres">
+    <input type="text" name="nombres" id="id_nombres" required>
 
     <label for="id_apellidos">Apellidos:</label>
-    <input type="text" name="apellidos" id="id_apellidos">
+    <input type="text" name="apellidos" id="id_apellidos" required>
 
     <label for="id_edad">Edad:</label>
-    <input type="number" name="edad" id="id_edad">
+    <input type="number" name="edad" id="id_edad" required>
 
     <label for="id_donador">Donador:</label>
     <input type="checkbox" name="donador" id="id_donador">
