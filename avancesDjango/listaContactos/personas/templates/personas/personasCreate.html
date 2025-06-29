@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
+
 {% block content %}
-  <form method="POST">
+<h1>Usando una template base</h1>
+
+<form method="POST">
     {% csrf_token %}
 
-    <label for="{{ form.nombre.id_for_label }}">Nombres:</label>
-    {{ form.nombre }}
+    <label for="id_nombres">Nombres:</label>
+    <input type="text" name="nombres" id="id_nombres">
 
-    <label for="{{ form.apellido.id_for_label }}">Apellidos:</label>
-    {{ form.apellido }}
+    <label for="id_apellidos">Apellidos:</label>
+    <input type="text" name="apellidos" id="id_apellidos">
 
-    <label for="{{ form.edad.id_for_label }}">Edad:</label>
-    {{ form.edad }}
+    <label for="id_edad">Edad:</label>
+    <input type="number" name="edad" id="id_edad">
 
-    <label for="{{ form.donador.id_for_label }}">Donador:</label>
-    {{ form.donador }}
+    <label for="id_donador">Donador:</label>
+    <input type="checkbox" name="donador" id="id_donador">
 
-    <input type="submit" value="Grabar" />
-  </form>
+    <input type="submit" value="Grabar">
+</form>
+
 {% endblock %}
