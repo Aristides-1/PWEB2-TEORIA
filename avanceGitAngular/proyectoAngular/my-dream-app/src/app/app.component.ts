@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-root',
+  standalone: true,               
+  imports: [RouterModule],      
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -12,12 +15,14 @@ export class AppComponent {
   webpage: string;
   hobbies: string[];
 
+
+
   constructor() {
-    console.log("Constructor working...");
-    this.name = "Carlos Jose Luis";
-    this.email = "ccorrales@unsa.edu.pe";
+    console.log("Constructor trabajando");
+    this.name = "Diego Cervantes";
+    this.email = "dcervantesapa@unsa.edu.pe";
     this.webpage = "http://www.unsa.edu.pe";
-    this.hobbies = ["Futbol", "Programación", "Netflix"];
+    this.hobbies = ["Futbol","Programacion", "Netdliox"];
   }
 
   showhobbies() {
