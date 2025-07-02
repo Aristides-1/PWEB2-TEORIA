@@ -1,16 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // <-- Aquí agregamos la importación de RouterModule
 
 @Component({
   selector: 'app-root',
-  standalone: true,               // Esto indica que es standalone
-  imports: [RouterModule],        // Aquí declaramos que usamos RouterModule
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'my-dream-app';
-  name = 'Diego Cervantes';
-  email = 'dcervantesapa@unsa.edu.pe';
-  webpage = 'http://www.unsa.edu.pe';
+  name: string;
+  email: string;
+  webpage: string;
+  hobbies: string[];
+
+  constructor() {
+    console.log("Constructor working...");
+    this.name = "Carlos Jose Luis";
+    this.email = "ccorrales@unsa.edu.pe";
+    this.webpage = "http://www.unsa.edu.pe";
+    this.hobbies = ["Futbol", "Programación", "Netflix"];
+  }
+
+  showhobbies() {
+    return true;
+  }
 }
