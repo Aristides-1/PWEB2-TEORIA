@@ -9,6 +9,7 @@
   <h2>{{ email }}</h2>
   <h2>{{ webpage }}</h2>
 
+  <button (click)="toggleHobbies()" class="btn">Mostrar Hobbies</button>
   <div *ngIf="showhobbies()" class="component2">
     <h3>Hobbies:</h3>
     <ul>
