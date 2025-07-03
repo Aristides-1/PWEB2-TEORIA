@@ -29,10 +29,8 @@ export class AppComponent {
   }
 
   toggleHobbies(){
-    this.showHobbies = !this.showHobbies;
+    this.showHobbies =!this.showHobbies;
   }
 
-  showhobbies() {
-    return true;
-  }
+
 }
