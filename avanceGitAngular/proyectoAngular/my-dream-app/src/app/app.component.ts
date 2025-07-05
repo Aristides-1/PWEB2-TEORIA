@@ -1,37 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
-import { CommonModule } from '@angular/common'; 
-
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,               
-  imports: [RouterModule, CommonModule],      
+  standalone: true,
+  imports: [FormsModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users = ['ryan','joe','cameron','john'];
-  activated = false;
-
-  
-  sayHello() {
-    alert("Hola desde app.component");
-  }
-
-
-    deleteUser(user:string){
-      for(let i=0; i<this.users.length; i++){
-        if(user==this.users[i]){
-                    this.users.splice(i,1);
-        }
-      }
-    }
-  addUser(newUser:HTMLInputElement) {
-    this.users.push(newUser.value);
-    newUser.value='';
-    newUser.focus();
-    return false;
-  }
+  name: string = 'Diego Cervantes';
+  age: number = 40;
 }
-
