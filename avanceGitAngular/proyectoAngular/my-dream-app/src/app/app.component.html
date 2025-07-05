@@ -1,33 +1,5 @@
 <router-outlet></router-outlet>
 
-<div class="black">
-  <h1>{{ title }}</h1>
-</div>
-
-<div class="ash">
-  <h2>{{ name }}</h2>
-  <h2>{{ email }}</h2>
-  <h2>{{ webpage }}</h2>
-
-  <button (click)="toggleHobbies()" class="btn">Mostrar Hobbies</button>
-  <div *ngIf="showHobbies" class="component2">
-    <h3>Hobbies:</h3>
-    <ul>
-      <li *ngFor= "let hobby of hobbies">{{ hobby }}</li>
-    </ul>
-  </div>
-  <a href="{{ webpage }}" target="_blank">Visita mi sitio web</a>
-</div>
-<div class="black">
-  <h1> {{ title }} </h1>
-</div>
-
-<form (submit)="newHobby(hobby)">
-  <input #hobby type="text" placeholder="hobby">
-</form>
-
-<app-hello-world>Aqui</app-hello-world>
-
 <ul>
   <li *ngFor="let user of users">
     <app-user [nameUser]="user"></app-user>
