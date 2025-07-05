@@ -15,3 +15,7 @@ export class AppComponent {
   activated = false;
 
 }
+
+sayHello() {
+    alert("Hola desde app.component");
+}
