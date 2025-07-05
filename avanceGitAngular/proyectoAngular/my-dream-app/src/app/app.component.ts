@@ -14,8 +14,9 @@ export class AppComponent {
   users = ['ryan','joe','cameron','john'];
   activated = false;
 
-}
-
-sayHello() {
+  
+  sayHello() {
     alert("Hola desde app.component");
+  }
+
 }
