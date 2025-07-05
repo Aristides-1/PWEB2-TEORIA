@@ -1,15 +1,11 @@
 <router-outlet></router-outlet>
-<h1>Desde app.component </h1>
-<ul>
-  <li *ngFor="let user of users">
-    {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
-  </li>
-</ul>
 
-<h2>Desde app.component </h2>
-<form (submit)="addUser(newUser)">
-  <input type="text" #newUser>
-  <button>Agregar usuario</button>
-</form>
+<div>
+  <form>
+    <input type="text" name="name" [(ngModel)]="name" />
+    <input type="number" name="age" [(ngModel)]="age" />
+  </form>
 
-
+  <h2><strong>Name:</strong> {{ name }}</h2>
+  <h2><strong>Age:</strong> {{ age }}</h2>
+</div>
