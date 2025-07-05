@@ -11,6 +11,9 @@ import { Component, OnInit,Input } from "@angular/core";
 
 })
 
+sayhello(nameUser){
+    alert("Hola "+nameUser);
+}
 export class UserComponent implements OnInit {
     @Input() nameUser:any;
     ngOnInit(): void {}
